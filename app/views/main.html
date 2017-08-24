@@ -1,23 +1,40 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div flex>
+  <h1 class="text-center">'Allo, 'Allo!</h1>
+  <md-content flex layout-padding class="bracket">
+    <h2 class="text-center">{{vm.brackets[0].name}}</h2>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <div class="round" id="quarterfinals">
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+      <div class="matchup-container">
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+        <div class="matchup">
+
+          <div class="game" id="game-1">
+            <div class="player top" id="seed-1">
+              <p>{{vm.players[0].name}}
+            </div>
+            <div class="player" id="seed-4">
+              <p>{{vm.players[1].name}}
+            </div>
+          </div>
+    
+          <div class="game" id="game-2">
+            <div class="player top" id="seed-2">
+              <p>{{vm.players[2].name}}
+            </div>
+            <div class="player" id="seed-3">
+              <p>{{vm.players[3].name}}
+            </div>
+          </div>
+
+        </div>
+ 
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+  </md-content>
 </div>

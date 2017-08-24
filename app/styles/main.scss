@@ -89,3 +89,106 @@ body {
     border-bottom: 0;
   }
 }
+
+
+/*CUSTOM CODE STARTS HERE*/
+
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700';
+
+$default-color: #858585;
+$winner-color: #60c645;
+$loser-color: #B33C25;
+$game-bg-color: #f7f7f7;
+$main-bg-color: #f0f2f2;
+$typeface: "Roboto Slab", serif;
+$game-width: 10rem;
+$game-height: $game-width / 3;
+$line-color: #c0c0c8;
+$game-margin-btm: 0.5rem;
+
+html {
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+.bracket {
+  background: $main-bg-color;
+}
+
+.matchup-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.matchup {
+  // display: inline-block;
+}
+
+
+.game {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background: $game-bg-color;
+  width: $game-width;
+  height: $game-height;
+  font-family: $typeface;
+  margin-bottom: $game-margin-btm;
+  padding: 0;
+  color: $default-color;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.18);
+}
+
+.player {
+  border-left: $default-color 0.5em solid;
+  width: $game-width;
+  height: $game-height / 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &.top {
+    border-bottom: 0.1em darken($game-bg-color, 30%) solid;
+  }
+}
+
+.connector {
+  height: $game-height + $game-margin-btm;
+  position: relative;
+  top: $game-height / 2;
+  font-size: 0
+  // background: blue;
+  // display: inline-block;
+  // vertical-align: middle;
+  // white-space: nowrap;
+}
+
+.merger {
+  height: 100%;
+  width: 2rem;
+  display: inline-block;
+  // vertical-align: top;
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    border: 0 solid;
+    border-color: $line-color;
+    border-right-width: thin;
+  }
+  &:before {
+    border-top-width: thin;
+  }
+  &:after {
+    border-bottom-width: thin;
+  }
+}
+
+.line {
+  height: 50%;
+  display: inline-block;
+  vertical-align: top;
+  width: 1.5rem;
+  border: 0 solid;
+  border-color: $line-color;
+  border-bottom-width: thin;
+}
